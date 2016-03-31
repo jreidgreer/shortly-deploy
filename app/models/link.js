@@ -7,7 +7,7 @@ var urlsSchema = db.Schema({
   baseUrl: String,
   code: String,
   title: String,
-  visits: Number,
+  visits: {type: Number, default: 0 },
   timestamp: { type: Date, default: Date.now }
 });
 
