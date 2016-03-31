@@ -36,10 +36,10 @@
 //   }
 // });
 
-var mongoose = require('mongoose');
-mongoose.connect('127.0.0.1:27017/main');
+var db = require('mongoose');
+db.connect('127.0.0.1:27017/main');
 
-var urlsSchema = mongoose.Schema({
+var urlsSchema = db.Schema({
   id: Number,
   url: String,
   baseUrl: String,
@@ -49,7 +49,7 @@ var urlsSchema = mongoose.Schema({
   timestamp: { type: Date, default: Date.now }
 });
 
-var userSchema = mongoose.Schema({
+var userSchema = db.Schema({
   id: Number,
   username: String,
   password: String,
